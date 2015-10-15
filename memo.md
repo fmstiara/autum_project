@@ -3,6 +3,20 @@
 - node.js socket.io を利用して双方向通信
 - swiftで頑張って, iOSアプリをつくる.
 
+##分かったこと
+**チャットの仕組み**  
+1. メッセージと送り主のデータを送る(サーバに送る)
+2. サーバからメッセージと送り主のデータをクライアントに送る
+3.
+
+**swift(dictionary)**  
+クライアントからサーバにデータを送るときに使用  
+
+'''swift
+let model = NSDictionary(dictionary: ["name": username, "message": textView.text, "date": convertDateToStr(NSDate())]);
+socket.emit("message send", args:[model] as SIOParameterArray)
+'''
+
 ##調べること
 - [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift)
 
