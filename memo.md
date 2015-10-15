@@ -30,6 +30,8 @@ self.socket.on("message send", callback:{(data:[AnyObject]!)  in
 })
 ```
 
+***Dictionaryを利用することで複数データの送受信が可能***
+
 **node.js(メッセージを受け取ったときの処理)**  
 
 ```javascript
