@@ -5,16 +5,44 @@
 
 ##分かったこと
 **チャットの仕組み**  
+
 1. メッセージと送り主のデータを送る(サーバに送る)
 2. サーバからメッセージと送り主のデータをクライアントに送る
 3.
 
-**swift(dictionary)**  
-クライアントからサーバにデータを送るときに使用  
+**クライアントswift**  
+クライアントからサーバにデータを送るとき  
 
 ```swift
+//これをボタンにリンクさせる
 let model = NSDictionary(dictionary: ["name": username, "message": textView.text, "date": convertDateToStr(NSDate())]);
 socket.emit("message send", args:[model] as SIOParameterArray)
+```
+
+サーバからメッセージが来た時  
+
+```swift
+self.socket.on("message send", callback:{(data:[AnyObject]!)  in
+    let dic = data[0] as NSDictionary
+    let model = MessageModel(_name: dic["name"] as String, _message: dic["message"] as String)
+    self.messages?.append(model)
+    self.tableView.reloadData()
+})
+```
+
+**node.js(メッセージを受け取ったときの処理)**  
+
+```javascript
+socket.on('message send', function(data) {
+    console.log('message send');
+
+    data.date = Date.parse(data.date);
+    var message = new Messages(data);
+    message.save(function(err, message) {
+        if (err) return console.error(err);
+        io.emit('message send', message);
+    });
+});
 ```
 
 ##調べること
