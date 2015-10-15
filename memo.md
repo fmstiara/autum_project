@@ -12,10 +12,10 @@
 **swift(dictionary)**  
 クライアントからサーバにデータを送るときに使用  
 
-'''swift
+```swift
 let model = NSDictionary(dictionary: ["name": username, "message": textView.text, "date": convertDateToStr(NSDate())]);
 socket.emit("message send", args:[model] as SIOParameterArray)
-'''
+```
 
 ##調べること
 - [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift)
