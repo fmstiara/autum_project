@@ -47,8 +47,17 @@ socket.on('message send', function(data) {
 });
 ```
 
+##UI
+storyboardの使い方！最高のサイトがいた！
+[AutoLayout](http://engineer.typemag.jp/article/ra-ios-tips06)
+
+keyboard隠れる問題を解決！
+[解決策1](http://qiita.com/shutokondo/items/6e29fba3f18bc7e81da9)
+[解決策2](http://hack.aipo.com/archives/7958/)
+
 ##試すこと
-メッセージをただの配列ではなくてカラムの機能を持ったオブジェクトにすると実現できるのでは？
+メッセージをただの配列ではなくてカラムの機能を持ったオブジェクトにすると実現できるのでは？  
+全部のツリーが見れる機能  
 
 ##調べること
 - [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift)
