@@ -3,6 +3,9 @@
 - node.js socket.io を利用して双方向通信
 - swiftで頑張って, iOSアプリをつくる.
 
+##SIOSocket
+Bridging-Header.hをSwift-Compilarにパスを通す
+
 ##分かったこと
 **チャットの仕組み**  
 
@@ -58,11 +61,17 @@ keyboard隠れる問題を解決！
 ##試すこと
 メッセージをただの配列ではなくてカラムの機能を持ったオブジェクトにすると実現できるのでは？  
 全部のツリーが見れる機能  
+コメントひとつひとつにgitのようなツリー構造と機能をもたせる。  
 
 ##調べること
-- [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift)
+expressによるwebアプリケーションの作成方法　　
 
-##参考サイト  
+##参考サイト(node.jsによるチャットシステム)
+- [node.jsチャット](http://engineer.recruit-lifestyle.co.jp/techblog/2015-07-29-node4/)
+- [node.js&heroku](http://shokai.org/blog/archives/6204)
+- [Express✕socket](http://qiita.com/n0bisuke/items/5820538e7e5f3432a4d7)
+
+##参考サイト(swift✕node)  
 - [☆swiftでsocket通信](http://qiita.com/ytakzk/items/c0a3af0f1b9e5a349d05)  
 - [☆swiftでwebsocket](http://grandbig.github.io/blog/2015/03/11/socketio-in-swift/)  
 - [iOSからnode.jsで双方向通信](http://dev.classmethod.jp/smartphone/ios-socketioobjc/)  
