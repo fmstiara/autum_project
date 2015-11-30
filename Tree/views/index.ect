@@ -1,0 +1,15 @@
+<% extend 'layout.ect' %>
+<% block 'css' : %>
+    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+<% end %>
+
+<form action="">
+<input type = "text" autocomplete="off" id = "sendText"></input>
+<button>Send</button>
+</form>
+
+<ul id="messages"></ul>
+
+
+<% block 'script' :%>
+<script src = "../public/javascripts/chat.js"></script>
