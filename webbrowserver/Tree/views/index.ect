@@ -1,0 +1,15 @@
+<% extend 'layout.ect' %>
+
+<% block 'messagesarea' :%>
+
+  <ul id="messages"></ul>
+  <div class="col-sm-8">
+  <textarea type = "text" class = "form-contrl" id = "sendText" rows = "1" ></textarea>
+  </div>
+  <button id = "reset">デバッグ用リセットボタン</button>
+
+<% end %>
+
+<% block 'script' :%>
+  <script src = "../public/javascripts/chat.js"></script>
+  <script src = "../public/javascripts/csscontrol.js"></script>

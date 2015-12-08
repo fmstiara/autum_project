@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%- @title %></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../public/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+  </head>
+  <body>
+    <header style="background-color:white">Header</header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 hidden-sm" style="">
+          まっぷ
+          <% content 'BrunchMap' %>
+        </div>
+
+        <div class="col-sm-7" style="background-color:white;">
+          <% content 'messagesarea' %>
+        </div>
+
+        <div class="col-sm-2 hidden-md hidden-sm" style="">
+          なんか出す
+        </div>
+      </div>
+    </div>
+    <footer style="background-color:gray">Footer</footer>
+    <script src = "../public/javascripts/jquery-2.1.4.min.js"></script>
+    <script src = "../public/javascripts/autosize.min.js"></script>
+    <script src="../public/javascripts/bootstrap.min.js"></script>
+    <script src="../public/javascripts/socket.io.js"></script>
+    <% content 'script': %>
+  </body>
+</html>
